@@ -1,10 +1,10 @@
-333   ��Ŀ¼��Ϊ��zelt����õ����ٶ�ģ�ͽ������񻯲�ֵ�ĵ�һ��
+111 本目录内为将zelt程序得到的速度模型进行网格化插值的第一步
 
-    rw-bispl.f �����ٶ�ģ�ͣ�v.in,vm.in������д���ٶȷֲ����и�ʽ��vv.txt����
-�ͽ����ļ���vz.txt����
-vv.txt ��ʽ��
-L ��layer number��     ע��������ɺ�LҪ�ĳ� LL������������棬��Ҫ����ʵ�����ʽ����һ�㣬����LLҪ�ټ�1��
-Nx                      ע������Nx����һ������ͬ������
+    rw-bispl.f 读入速度模型（v.in,vm.in），并写成速度分层排列格式（vv.txt），
+和界面文件（vz.txt）。
+vv.txt 格式：
+L （layer number）     注：计算完成后，L要改成 LL（如有虚拟界面，还要参照实界面格式复制一层，这样LL要再加1）
+Nx                      注：各层Nx按第一层插成相同个数。
 x1,x2......x(Nx)
 D1,D2......D(Nx)
 v1,v2......v(Nx)
@@ -13,7 +13,7 @@ x1,x2,.....x(Nx)
 D1,D2......D(Nx)        
 v1,v2,.....v(Nx)
 ......
-LL��ʵ�ʲ�����,mnx(�ܸ�����   ע�⣺����һ������ǰ����LL�����ļ�ͷ������L��
+LL（实际层数）,mnx(总个数）   注意：作下一步计算前，将LL放在文件头，代替L。
 
-ע�⣺�ر����ʱ�ɼ�ˮƽ���ٶȲ㣨��v.in�У���chb���棩
+注意：地表起伏时可加水平零速度层（在v.in中，见chb剖面）
 
